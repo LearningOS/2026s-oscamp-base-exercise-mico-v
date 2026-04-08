@@ -1,11 +1,10 @@
 {
   "image": "mcr.microsoft.com/devcontainers/rust:latest",
+  "workspaceFolder": "/workspaces/2026s-oscamp-base-exercise-mico-v",
   "waitFor": "onCreateCommand",
   "onCreateCommand": ".devcontainer/setup.sh",
   "updateContentCommand": "cargo build -p oscamp-cli",
-  "postAttachCommand": {
-    "server": "./target/debug/oscamp watch"
-  },
+  "postAttachCommand": "echo 'Container ready. Run ./target/debug/oscamp watch in a terminal to start interactive mode.'",
   "customizations": {
     "vscode": {
       "extensions": [
